@@ -45,11 +45,6 @@ module.exports = {
     ]
   },
   plugins:[
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'commons',
-    //   filename: 'commons.js',
-    //   minChunks: 2,
-    // }),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
