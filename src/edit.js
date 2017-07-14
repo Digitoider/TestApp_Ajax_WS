@@ -37,7 +37,6 @@ function updateUserWithAjax(userdata, $errorsDiv){
     method: 'POST',
     dataType: 'json',
     data: userdata,
-    // contentType: 'application/json',
     crossDomain: true,
     success: function(data){
       if(data.errors !== undefined && data.errors.length != 0){
@@ -56,24 +55,6 @@ function updateUserWithAjax(userdata, $errorsDiv){
 }
 import getUserInformationAjax from './js/getUserInformationAjax.js';
 getUserInformationAjax(userId, [fillUserProfile, fillUserForm]);
-// $.ajax({
-//   url: 'http://localhost:8008/user/' + userId,
-//   method: 'GET',
-//   dataType: 'json',
-//   crossDomain: true,
-//   success: function(data){
-//     if(data.errors !== undefined && data.errors.length != 0){
-//       showErrors($('#errors'), data.errors);
-//       return;
-//     }
-//
-//     fillUserProfile(data);
-//     fillUserForm(data);
-//   },
-//   error: function(jqXHR, status){
-//     showErrors($('#errors'), ['Не удалось получить данные']);
-//   },
-// });
 
 function getFormData(){
   var userdata = {
