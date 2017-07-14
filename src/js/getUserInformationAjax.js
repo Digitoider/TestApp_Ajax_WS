@@ -15,8 +15,6 @@ export default function getUserInformationAjax(userId, callbacks){
       callbacks.forEach(function(callback){
         callback(data);
       });
-      // fillUserProfile(data);
-      // fillUserForm(data);
     },
     error: function(jqXHR, status){
       showErrors($('#errors'), ['Не удалось получить данные']);
